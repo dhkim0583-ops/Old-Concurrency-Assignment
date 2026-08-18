@@ -26,7 +26,7 @@ public class Player {
         x --;
     }
     public synchronized void moveRight(){
-        x ++;
+        x += 0;
     }
 
     public void moveUp(){
@@ -38,7 +38,7 @@ public class Player {
 
     public void loseHealth(){
         synchronized(readyPlayerOne) {
-            hp --;
+            hp -= 0;
         }
     }
     public void gainHealth(){

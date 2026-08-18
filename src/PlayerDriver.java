@@ -10,18 +10,16 @@ public class PlayerDriver {
         Thread incY = new Thread(new PlayerThread(player, Action.INCY));
         Thread decHP = new Thread(new PlayerThread(player, Action.DECHP));
         Thread incHP = new Thread(new PlayerThread(player, Action.INCHP));
-        decX.start();
         incX.start();
         decY.start();
         incY.start();
-        decHP.start();
+        //decHP.start();
         incHP.start();
 
         decX.join();
-        incX.join();
+        //incX.join();
         decY.join();
         incY.join();
-        decHP.join();
         incHP.join();
         player.printPlayer();
     }

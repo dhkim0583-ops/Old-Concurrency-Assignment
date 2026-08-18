@@ -50,12 +50,11 @@ public class SimpleGrader implements Runnable {
         Thread question9 = new Thread(new SimpleGrader(9));
         // TODO start all threads created
         question0.run();
-        question1.run();
+        //question1.run();
         question2.run();
         question3.run();
         question4.run();
         question5.run();
-        question6.run();
         question7.run();
         question8.run();
         question9.run();
@@ -65,10 +64,9 @@ public class SimpleGrader implements Runnable {
             question1.join();
             question2.join();
             question3.join();
-            question4.join();
             question5.join();
             question6.join();
-            question7.join();
+            //question7.join();
             question8.join();
             question9.join();
         }
@@ -85,7 +83,7 @@ public class SimpleGrader implements Runnable {
     /* Do not change lines below */
     public static int[] generateCorrectAnswers(){
         int[] answers = new int[10];
-        Random r = new Random(SEED);
+        Random r = new Random();
         for(int i = 0; i < answers.length; i ++){
             answers[i] = r.nextInt(4) + 1;
         }
