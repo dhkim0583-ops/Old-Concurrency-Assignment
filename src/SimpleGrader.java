@@ -92,7 +92,7 @@ public class SimpleGrader implements Runnable {
 
     public static int[][] generateStudentAnswers(int[] answers){
         int[][] response = new int[10][1000];
-        Random r = new Random(SEED);
+        Random r = new Random();
         for(int i = 0; i < response.length; i ++){
             int answer = answers[i];
             for(int j = 0; j < response[i].length; j++){
